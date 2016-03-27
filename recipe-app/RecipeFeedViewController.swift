@@ -36,12 +36,15 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
             //API Response
             case .Success:
                 // JSON is retrieved
-                print("\(response.result.value!)")
                 
+                //print("\(response.result.value!)")
+                self.recipes = Recipe.recipesWithArray(response.result.value! as! [NSDictionary])
                 // Now the issue is with loading the data we get into our recipes array. Uncomment both lines below to see error.
                 //self.recipes = response.result.value! as! [Recipe]
                 //print("\(self.recipes!)")
+                self.recipeTableView.reloadData()
             case .Failure:
+                print("\(response.description)")
                 print("Request failed with error:")
             }
         }

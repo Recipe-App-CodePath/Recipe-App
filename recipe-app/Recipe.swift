@@ -21,4 +21,14 @@ class Recipe: NSObject {
             imageUrl = nil
         }
     }
+    
+    class func recipesWithArray(dictionaries: [NSDictionary]) -> [Recipe] {
+        var recipes = [Recipe]()
+        
+        for dictionary in dictionaries {
+            let recipe = Recipe(dictionary: dictionary)
+            recipes.append(recipe)
+        }
+        return recipes
+    }
 }
