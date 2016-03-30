@@ -20,17 +20,11 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
         super.viewDidLoad()
         
         tokenView.delegate = self
-        tokenView.promptText = "Top 5: "
-        tokenView.placeholder = "Type to search"
-        tokenView.descriptionText = "Languages"
-        tokenView.maxTokenLimit = 5
-        tokenView.style = .Squared
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        tokenView.promptText = ""
+        tokenView.placeholder = "Type ingredient"
+        tokenView.descriptionText = "Ingredients"
+        tokenView.maxTokenLimit = -1
+        tokenView.style = .Rounded
     }
     
     func tokenView(token: KSTokenView, performSearchWithString string: String, completion: ((results: Array<AnyObject>) -> Void)?) {
@@ -45,7 +39,13 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
     }
     
     func tokenView(token: KSTokenView, displayTitleForObject object: AnyObject) -> String {
+        // Returns the autocomplete list
+        //print("\(object)")
         return object as! String
+    }
+    
+    func tokenView(tokenView: KSTokenView, didAddToken token: KSToken) {
+        print("\(token)")
     }
 
 }
