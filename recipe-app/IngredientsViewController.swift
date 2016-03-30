@@ -15,6 +15,7 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
     @IBOutlet weak var tokenView: KSTokenView!
     
     let names: Array<String> = IngredientList.names()
+    var ingredients: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
         tokenView.promptText = ""
         tokenView.placeholder = "Type ingredient"
         tokenView.descriptionText = "Ingredients"
-        tokenView.maxTokenLimit = -1
+        tokenView.maxTokenLimit = -1 //Infinite token limit
         tokenView.style = .Rounded
     }
     
@@ -45,7 +46,10 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
     }
     
     func tokenView(tokenView: KSTokenView, didAddToken token: KSToken) {
-        print("\(token)")
+        ingredients?.append(token.title)
+        
+        //print("\(token.title)")
     }
 
+    
 }
