@@ -15,13 +15,16 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - Alamofire (3.2.1)
+  - KSTokenView (2.4.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Alamofire
+  - KSTokenView (~> 2.4.0)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  KSTokenView: e7b8621cb76b423c8e00118726199f348af87ea2
 
 COCOAPODS: 0.39.0

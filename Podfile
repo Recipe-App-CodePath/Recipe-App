@@ -6,5 +6,6 @@ use_frameworks!
 target 'recipe-app' do
     pod 'AFNetworking'
     pod 'Alamofire'
+    pod 'KSTokenView', '~> 2.4.0'
 end
 

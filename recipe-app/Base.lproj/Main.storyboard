@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VoH-uf-EvI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Ingredients View Controller-->
+        <scene sceneID="cJQ-HV-qSe">
+            <objects>
+                <viewController id="VoH-uf-EvI" customClass="IngredientsViewController" customModule="recipe_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f49-kk-A34"/>
+                        <viewControllerLayoutGuide type="bottom" id="3uv-GA-JkS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IzK-CM-OH3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGG-ti-bv6" customClass="KSTokenView" customModule="KSTokenView">
+                                <rect key="frame" x="40" y="148" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tokenView" destination="DGG-ti-bv6" id="F0F-9h-L3T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qz6-dR-WYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="365"/>
+        </scene>
         <!--Recipe Feed View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -25,11 +53,11 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="277"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gB1-Za-dq3" id="00v-kc-Z7i">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="276.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NQ0-dR-pLy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="276.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="277" id="B3L-a8-cLX"/>
                                                         <constraint firstAttribute="width" constant="320" id="Kee-Ah-YTq"/>
