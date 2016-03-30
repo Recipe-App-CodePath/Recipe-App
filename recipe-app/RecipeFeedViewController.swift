@@ -5,6 +5,7 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet weak var recipeTableView: UITableView!
     
+    var ingredients: [String]!
     var recipes: [Recipe]!
     
     let headers = [
@@ -26,6 +27,8 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
         //let limitLicense = false
         //let number = 4
         //let ranking = 1
+        
+
         
         let requestUrl = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=\(ingredients)")
         

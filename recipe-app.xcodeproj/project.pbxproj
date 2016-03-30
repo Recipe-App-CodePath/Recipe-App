@@ -110,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				ECCC49EE1CAB99E700CE302A /* IngredientList.swift */,
-				EC5C1E871CA50F7B005EB9E8 /* RecipeFeedViewController.swift */,
 				ECCC49EC1CAB952A00CE302A /* IngredientsViewController.swift */,
+				EC5C1E871CA50F7B005EB9E8 /* RecipeFeedViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

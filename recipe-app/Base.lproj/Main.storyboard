@@ -21,6 +21,13 @@
                                 <rect key="frame" x="20" y="28" width="280" height="143"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFn-lE-FNP">
+                                <rect key="frame" x="145" y="203" width="30" height="30"/>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="SegueIngredients" id="MqB-SZ-1gE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

@@ -1,11 +1,3 @@
-//
-//  IngredientsViewController.swift
-//  recipe-app
-//
-//  Created by Julio Hernandez-Duran on 3/29/16.
-//  Copyright © 2016 Sosuke. All rights reserved.
-//
-
 import UIKit
 import KSTokenView
 
@@ -13,7 +5,7 @@ import KSTokenView
 class IngredientsViewController: UIViewController, KSTokenViewDelegate {
 
     @IBOutlet weak var tokenView: KSTokenView!
-    
+
     let names: Array<String> = IngredientList.names()
     var ingredients: [String]?
     
@@ -46,10 +38,17 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
     }
     
     func tokenView(tokenView: KSTokenView, didAddToken token: KSToken) {
-        ingredients?.append(token.title)
-        
-        //print("\(token.title)")
+        ingredients?.append("Apple")
+        //token.title
+        print("Added ingredients: \(ingredients?.count)")
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SegueIngredients" {
+            if let destination = segue.destinationViewController as? IngredientsViewController {
+                destination.ingredients = ingredients
+            }
+        }
+    }
     
 }
