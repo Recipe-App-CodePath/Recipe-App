@@ -16,6 +16,8 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         recipeTableView.delegate = self
         recipeTableView.dataSource = self
         
@@ -23,14 +25,23 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
         recipeTableView.estimatedRowHeight = 120
         
         // Parameters
-        let ingredients = "Apple"
+        var ingredients_str = ""
         //let limitLicense = false
         //let number = 4
         //let ranking = 1
         
+   
+        print(ingredients)
 
+        for ingre in ingredients {
+            ingredients_str += "\(ingre),"
+        }
         
-        let requestUrl = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=\(ingredients)")
+    
+ 
+        
+        let requestUrl = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=\(ingredients_str)")
+        
         
         // API Request
         Alamofire.request(.GET, requestUrl!, headers: headers, encoding: .JSON).responseJSON {

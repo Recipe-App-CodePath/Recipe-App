@@ -12,6 +12,8 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ingredients = []
+        
         tokenView.delegate = self
         tokenView.promptText = ""
         tokenView.placeholder = "Type ingredient"
@@ -32,20 +34,16 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
     }
     
     func tokenView(token: KSTokenView, displayTitleForObject object: AnyObject) -> String {
-        // Returns the autocomplete list
-        //print("\(object)")
         return object as! String
     }
     
     func tokenView(tokenView: KSTokenView, didAddToken token: KSToken) {
-        ingredients?.append("Apple")
-        //token.title
-        print("Added ingredients: \(ingredients?.count)")
+        ingredients!.append(token.title)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SegueIngredients" {
-            if let destination = segue.destinationViewController as? IngredientsViewController {
+            if let destination = segue.destinationViewController as? RecipeFeedViewController {
                 destination.ingredients = ingredients
             }
         }
