@@ -13,11 +13,11 @@
 - [x] User can search recipes by ingredients
 - [x] User can input multiple ingredients
 - [ ] User can return to input ingredients
-- [ ] Indicator to show ingredients matched
-
+- [ ] User select a recipe and see a detailed description of recipe
 
 **Optional** features implemented:
 
+- [ ] Indicator to show ingredients matched
 - [ ] On startup user sees app logo with a backdrop
 - [ ] User can save default ingredients 
 - [ ] User can get recipes by catergories
