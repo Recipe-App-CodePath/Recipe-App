@@ -15,6 +15,7 @@
 - [ ] User can return to input ingredients
 - [ ] Indicator to show ingredients matched
 
+
 **Optional** features implemented:
 
 - [ ] On startup user sees app logo with a backdrop
