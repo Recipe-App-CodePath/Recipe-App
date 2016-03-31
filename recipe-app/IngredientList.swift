@@ -8,6 +8,10 @@ class IngredientList: NSObject {
         "Cheese",
         "Milk",
         "Bread",
+        "Spaghetti",
+        "Tomatoes",
+        "Cucumbers",
+        "BellPeppers",
         ]
     }
 }

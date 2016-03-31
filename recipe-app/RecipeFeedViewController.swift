@@ -37,9 +37,6 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
             ingredients_str += "\(ingre),"
         }
         
-    
- 
-        
         let requestUrl = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=\(ingredients_str)")
         
         
