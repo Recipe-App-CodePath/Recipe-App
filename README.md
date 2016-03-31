@@ -9,10 +9,11 @@
 **Required** functionality completed:
 
 - [x] Setup API calls 
-- [x] Setup table view/collection view for recipe results storyboard
-- [ ] Indicator to show ingredients matched
+- [x] Setup table view for recipe results
 - [x] User can search recipes by ingredients
 - [x] User can input multiple ingredients
+- [ ] User can return to input ingredients
+- [ ] Indicator to show ingredients matched
 
 **Optional** features implemented:
 
@@ -24,7 +25,7 @@
 
 ## Video Walkthrough 
 
-<img src='.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/9OpfM6N.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
