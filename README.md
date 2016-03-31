@@ -4,17 +4,15 @@
 
 **[hours]** hours spent in total
 
-## Week 1 (Feb. 22-28, 2016)
-
 ## User Stories
 
 **Required** functionality completed:
 
-- [ ] Setup API calls 
-- [ ] Setup table view/collection view for recipe results storyboard
+- [x] Setup API calls 
+- [x] Setup table view/collection view for recipe results storyboard
 - [ ] Indicator to show ingredients matched
-- [ ] User can search recipes by ingredients
-- [ ] User can input multiple ingredients
+- [x] User can search recipes by ingredients
+- [x] User can input multiple ingredients
 
 **Optional** features implemented:
 
@@ -33,6 +31,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Challenges encountered while building the app.
+
+1. 
+2.
+3.
 
 ## License
 
