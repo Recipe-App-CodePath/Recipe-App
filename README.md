@@ -13,7 +13,7 @@
 - [x] User can search recipes by ingredients
 - [x] User can input multiple ingredients
 - [ ] User can return to input ingredients
-- [ ] User select a recipe and see a detailed description of recipe
+- [ ] User can select a recipe and see a detailed description of recipe
 
 **Optional** features implemented:
 
