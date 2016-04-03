@@ -12,7 +12,7 @@
 - [x] Setup table view for recipe results
 - [x] User can search recipes by ingredients
 - [x] User can input multiple ingredients
-- [ ] User can return to input ingredients
+- [x] User can return to input ingredients
 - [ ] User can select a recipe and see a detailed description of recipe
 
 **Optional** features implemented:
@@ -27,6 +27,8 @@
 ## Video Walkthrough 
 
 <img src='https://imgur.com/9OpfM6N.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/uA0CFeb.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
