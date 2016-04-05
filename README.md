@@ -26,7 +26,6 @@
 
 ## Video Walkthrough 
 
-<img src='https://imgur.com/9OpfM6N.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='http://imgur.com/uA0CFeb.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
