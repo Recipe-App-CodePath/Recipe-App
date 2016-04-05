@@ -16,7 +16,7 @@ class IngredientsViewController: UIViewController, KSTokenViewDelegate {
         
         tokenView.delegate = self
         tokenView.promptText = ""
-        tokenView.placeholder = "Type ingredient"
+        tokenView.placeholder = "Type ingredients here"
         tokenView.descriptionText = "Ingredients"
         tokenView.maxTokenLimit = -1 //Infinite token limit
         tokenView.style = .Rounded
