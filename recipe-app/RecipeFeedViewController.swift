@@ -5,6 +5,7 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet weak var recipeTableView: UITableView!
     
+    var feed: [NSDictionary]?
     var ingredients: [String]!
     var recipes: [Recipe]!
     
@@ -75,4 +76,44 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
 
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       /*
+        let cell = sender as! UITableViewCell
+        
+        let indexPath = recipeTableView.indexPathForCell(cell)
+        
+        
+        
+        let food = feed![indexPath!.row]
+        
+        let recipeViewController = segue.destinationViewController as? RecipeViewController
+        
+        recipeViewController!.food = food */
+        
+        let cell = sender as! UITableViewCell
+        if let indexPath = recipeTableView.indexPathForCell(cell), feed = feed {
+            print(indexPath)
+            let food = feed[indexPath.row]
+            if let recipeViewController = segue.destinationViewController as? RecipeViewController {
+                recipeViewController.food = food
+            }
+            
+            
+        }
+        
+        
+        print("Prepare for segue")
+    
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
+    
+    }
+    
+    
+    
+    
 }
