@@ -16,7 +16,7 @@ class RecipeViewController: UIViewController {
     
     @IBOutlet weak var recipeLabel: UILabel!
     
-    var recipe: NSDictionary!
+    var recipe: Recipe!
     
 
     override func viewDidLoad() {

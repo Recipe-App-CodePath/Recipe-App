@@ -2,7 +2,7 @@ import UIKit
 import Alamofire
 
 class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var recipeTableView: UITableView!
     
     //var feed: [NSDictionary]?
@@ -16,7 +16,7 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         
         recipeTableView.delegate = self
@@ -31,35 +31,40 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
         //let number = 4
         //let ranking = 1
         
-   
-        print(ingredients)
-
-        for ingre in ingredients {
-            ingredients_str += "\(ingre),"
-        }
-        
-        let requestUrl = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=\(ingredients_str)")
         
         
-        // API Request
-        Alamofire.request(.GET, requestUrl!, headers: headers, encoding: .JSON).responseJSON {
-            response in switch response.result {
-                
-            //API Response
-            case .Success:
-                // JSON is retrieved
-                
-                //print("\(response.result.value!)")
-                self.recipes = Recipe.recipesWithArray(response.result.value! as! [NSDictionary])
-                // Now the issue is with loading the data we get into our recipes array. Uncomment both lines below to see error.
-                //self.recipes = response.result.value! as! [Recipe]
-                //print("\(self.recipes!)")
-                self.recipeTableView.reloadData()
-            case .Failure:
-                print("\(response.description)")
-                print("Request failed with error:")
+        
+        if let ingredients = ingredients {
+            print(ingredients)
+            
+            for ingre in ingredients {
+                ingredients_str += "\(ingre),"
+            }
+            
+            let requestUrl = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=\(ingredients_str)")
+            
+            
+            // API Request
+            Alamofire.request(.GET, requestUrl!, headers: headers, encoding: .JSON).responseJSON {
+                response in switch response.result {
+                    
+                    //API Response
+                case .Success:
+                    // JSON is retrieved
+                    
+                    //print("\(response.result.value!)")
+                    self.recipes = Recipe.recipesWithArray(response.result.value! as! [NSDictionary])
+                    // Now the issue is with loading the data we get into our recipes array. Uncomment both lines below to see error.
+                    //self.recipes = response.result.value! as! [Recipe]
+                    //print("\(self.recipes!)")
+                    self.recipeTableView.reloadData()
+                case .Failure:
+                    print("\(response.description)")
+                    print("Request failed with error:")
+                }
             }
         }
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,13 +82,13 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
         cell.recipe = recipes[indexPath.row]
         return cell
     }
-
+    
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-       /*
+        /*
         let cell = sender as! UITableViewCell
         
         let indexPath = recipeTableView.indexPathForCell(cell)
@@ -94,7 +99,7 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         let recipeViewController = segue.destinationViewController as? RecipeViewController
         
-        recipeViewController!.food = food */
+        recipeViewController!.food =/Users/user/Desktop/Recipe-App food */
         
         let cell = sender as! UITableViewCell
         if let indexPath = recipeTableView.indexPathForCell(cell), recipes = recipes {
@@ -109,10 +114,10 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         
         print("Prepare for segue")
-    
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    
+        
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
     }
     
     
