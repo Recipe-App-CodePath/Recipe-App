@@ -5,7 +5,7 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet weak var recipeTableView: UITableView!
     
-    var feed: [NSDictionary]?
+    //var feed: [NSDictionary]?
     var ingredients: [String]!
     var recipes: [Recipe]!
     
@@ -72,6 +72,8 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = recipeTableView.dequeueReusableCellWithIdentifier("RecipeCell", forIndexPath: indexPath) as! RecipeCell
+        
+        //let recipe = recipes![indexPath.row]
         cell.recipe = recipes[indexPath.row]
         return cell
     }
@@ -95,11 +97,11 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
         recipeViewController!.food = food */
         
         let cell = sender as! UITableViewCell
-        if let indexPath = recipeTableView.indexPathForCell(cell), feed = feed {
+        if let indexPath = recipeTableView.indexPathForCell(cell), recipes = recipes {
             print(indexPath)
-            let food = feed[indexPath.row]
+            let recipe = recipes[indexPath.row]
             if let recipeViewController = segue.destinationViewController as? RecipeViewController {
-                recipeViewController.food = food
+                recipeViewController.recipe = recipe
             }
             
             

@@ -16,14 +16,14 @@ class RecipeViewController: UIViewController {
     
     @IBOutlet weak var recipeLabel: UILabel!
     
-    var food: NSDictionary?
+    var recipe: NSDictionary!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        print(food)
+        print(recipe)
 
         // Do any additional setup after loading the view.
     }
