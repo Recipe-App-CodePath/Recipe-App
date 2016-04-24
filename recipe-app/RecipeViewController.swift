@@ -22,8 +22,14 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let title = recipe.title
+        titleLabel.text = title
         
-        print(recipe)
+        let summary = recipe as? String
+        recipeLabel.text = summary
+        
+        
+        print(recipe.title)
 
         // Do any additional setup after loading the view.
     }
