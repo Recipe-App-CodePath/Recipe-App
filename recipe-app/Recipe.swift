@@ -6,12 +6,14 @@ class Recipe: NSObject {
     let missedIngredientCount: Int?
     let title: String?
     let imageUrl: NSURL?
+    var summary: String!
     
     init(dictionary: NSDictionary) {
         id = dictionary["id"] as? Int
         usedIngredientCount = dictionary["usedIngredientCount"] as? Int
         missedIngredientCount = dictionary["missedIngredientCount"] as? Int
         title = dictionary["title"] as? String
+        summary = dictionary["summary"] as? String
         
         let imageUrlString = dictionary["image"] as? String
         

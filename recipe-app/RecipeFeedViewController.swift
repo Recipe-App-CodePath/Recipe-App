@@ -1,6 +1,14 @@
 import UIKit
 import Alamofire
 
+
+let headers = [
+    "X-Mashape-Key": "NHDnizUDH5mshbK6fNDHtFJAQRpDp1zYm3FjsnAVFgzGtVfsXi",
+    "Accept": "application/json"
+]
+
+
+
 class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var recipeTableView: UITableView!
@@ -8,13 +16,7 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
     //var feed: [NSDictionary]?
     var ingredients: [String]!
     var recipes: [Recipe]!
-    
-    let headers = [
-        "X-Mashape-Key": "NHDnizUDH5mshbK6fNDHtFJAQRpDp1zYm3FjsnAVFgzGtVfsXi",
-        "Accept": "application/json"
-    ]
-    
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         
         
@@ -43,6 +45,8 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
             
             let requestUrl = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=\(ingredients_str)")
             
+//            let requestUrl = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/648715/summary")
+            
             
             // API Request
             Alamofire.request(.GET, requestUrl!, headers: headers, encoding: .JSON).responseJSON {
@@ -57,6 +61,12 @@ class RecipeFeedViewController: UIViewController, UITableViewDataSource, UITable
                     // Now the issue is with loading the data we get into our recipes array. Uncomment both lines below to see error.
                     //self.recipes = response.result.value! as! [Recipe]
                     //print("\(self.recipes!)")
+                    
+                    print("-------------------")
+                    for recipe in self.recipes {
+                        print(recipe.title)
+                    }
+                    
                     self.recipeTableView.reloadData()
                 case .Failure:
                     print("\(response.description)")
