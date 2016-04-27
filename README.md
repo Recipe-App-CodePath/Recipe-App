@@ -1,6 +1,6 @@
 # Group Project - CodePathUniversity
 
-**HomeChef** is a iOS app [description].
+**HomeChef** is a iOS app that gives the user a list of recipes based on ingredients.
 
 **30** hours spent in total
 
