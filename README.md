@@ -1,8 +1,8 @@
 # Group Project - CodePathUniversity
 
-**App Name** is a iOS app [description].
+**HomeChef** is a iOS app [description].
 
-**[hours]** hours spent in total
+**30** hours spent in total
 
 ## User Stories
 
