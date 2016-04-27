@@ -82,7 +82,8 @@ class RecipeViewController: UIViewController {
         let summary = recipe.summary
         recipeLabel.text = summary
         
-        
+        let posterImage = recipe.imageUrl
+        posterImageView.setImageWithURL(posterImage!)
 
         
         print(recipe.title)
